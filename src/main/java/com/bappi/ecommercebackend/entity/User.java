@@ -4,12 +4,20 @@ package com.bappi.ecommercebackend.entity;
 import com.bappi.ecommercebackend.enums.Role;
 import com.fasterxml.jackson.annotation.JsonIgnore;
 import jakarta.persistence.*;
+import lombok.AllArgsConstructor;
+import lombok.Builder;
+import lombok.Data;
+import lombok.RequiredArgsConstructor;
 
 import java.time.LocalDateTime;
 import java.util.*;
 
 @Entity
 @Table(name = "user")
+@Data
+@Builder
+@RequiredArgsConstructor
+@AllArgsConstructor
 public class User {
 
     @Id
@@ -31,8 +39,8 @@ public class User {
     @Column(name = "role")
     private Role role;
 
-    @Column(name = "")
-    private LocalDateTime createdAt;
+    @Column(name = "created_at")
+    private String createdAt;
 
     @ElementCollection
     @CollectionTable(name = "addresses", joinColumns = @JoinColumn(name = "user_id"))
