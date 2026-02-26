@@ -21,8 +21,6 @@ public class AuthController {
     public ResponseEntity<?> login(@Parameter(name = "login info", required = true)
                                    @RequestBody @Valid LoginRequestDto loginRequestDto){
 
-
-
         return null;
     }
 }

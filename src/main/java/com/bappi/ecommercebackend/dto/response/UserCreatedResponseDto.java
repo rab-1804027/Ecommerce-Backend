@@ -1,4 +1,10 @@
 package com.bappi.ecommercebackend.dto.response;
 
-public class UserCreatedResponseDto {
-}
+import lombok.Builder;
+
+@Builder
+public record UserCreatedResponseDto (
+    String name,
+    String email,
+    String message
+){}

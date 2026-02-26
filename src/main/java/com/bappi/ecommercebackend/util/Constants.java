@@ -6,6 +6,10 @@ import javax.crypto.SecretKey;
 
 public class Constants {
 
+    public static class Message{
+        public static final String USER_CREATE_RESPONSE_MESSAGE = "YOUR ACCOUNT SUCCESSFULLY CREATED";
+    }
+
     public static class JwtConstant{
         public static final SecretKey SECRET_KEY= Keys.hmacShaKeyFor("b63f27727e24a4da182952b16166d584".getBytes());
         public static final String JWT_HEADER="Authorization";
